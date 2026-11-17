@@ -20,7 +20,7 @@ USER jovyan
 
 # RUN conda install -y scikit-learn
 
-RUN pip install --no-cache-dir networkx scipy geopandas babypandas==0.1.5
+RUN pip install --no-cache-dir "numpy<2" networkx scipy "geopandas<1" babypandas==0.1.5
 
 # Override command to disable running jupyter notebook at launch
 CMD ["/bin/bash"]
